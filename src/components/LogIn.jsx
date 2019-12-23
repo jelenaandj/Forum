@@ -14,7 +14,7 @@ function LogIn({setUser,history}) {
         .then(data =>  {
             if(data.success) {
                 setUser(data.user)
-                // history.push('/memory-game')
+                history.push('')
                 console.log('logged in')
             }
             else console.log('Not Logged in')

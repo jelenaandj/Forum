@@ -4,28 +4,36 @@ import { getAllDisc } from '../service'
 
 export default function DiscussionsList({history}) {
 
-const[allDisc,setAllDisc]=useState('')
+const[allDisc,setAllDisc]=useState([])
 
     useEffect(()=>{
         getAllDisc().then(data=>{
            
-                setAllDisc(data.topics)   
+                setAllDisc(data.topics) 
+                console.log(data.topics)  
            
         })
     },[])
-    
+    console.log(allDisc[0])
     return (
         <div>
-            {/* {allDisc.map(disc=>{
-                return <Discussion key={disc.topics_id} disc={disc}history={history}/>
+            {/* {allDisc.forEach(obj=>{
+                obj.map(disc=>{
+                    console.log(disc)
+                })
             })} */}
+       
+            {allDisc.map((disc)=>{
+                return <Discussion key={disc.topics_id} title={disc.title} timestamp={disc.timestamp}history={history}/>
+            })}
+ 
             <form>
                 <input type='text' placeholder='Discussion Name' />
                 <input type='text' placeholder='New Message' />
                 <input type="submit" value="Send" />
             </form>
         </div>
-    )
+    );
 }
 // useEffect(()=>{
 //     getAllDisc().then(data=>{
