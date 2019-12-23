@@ -25,9 +25,9 @@ export default function Profile({match}) {
     return (
         <div>
             <p>{user.username}</p>
-            <p>surname</p>
-            <p>username</p>
-            <p>email</p>
+            <p>{user.surname}</p>
+            <p>{user.username}</p>
+            <p>{user.email}</p>
 
         </div>
     )
