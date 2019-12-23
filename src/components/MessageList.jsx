@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Message from './Message'
 import { getDiscMsg } from '../service';
 
-export default function MessageList({match}) {
+export default function MessageList({match, history}) {
 
     // const [topicID,setTopicID] = useState(match.params.topics_id)
     const [messages, setMessages] = useState([])
@@ -21,7 +21,7 @@ export default function MessageList({match}) {
     return (
         <div>
             {messages.map(message=>{
-                return  <Message message={message}/>
+                return <Message message={message} history={history}/>
             })}
             {/* <form>
                 <input type='text' placeholder='Discussion Name' />

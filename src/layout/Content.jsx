@@ -15,7 +15,7 @@ export default function Content({setUser,user}) {
             <Route path='/register' component={(props) => <Register setUser={setUser} {...props}/>} />
             <Route path='/login' component={(props) => <LogIn setUser={setUser} {...props}/>} />
             <Route path='/MessageList/:topic_id' component={(props) => <MessageList {...props}/>} />
-            <Route path='/profile/:user_id' component={(props) => <Profile setUser={setUser} {...props}/>} />
+            <Route path='/profile/:username' component={(props) => <Profile setUser={setUser} {...props}/>} />
         </Switch>
         </main>
     )
