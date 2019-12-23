@@ -2,8 +2,9 @@ import React, { useState,useEffect } from 'react'
 
 export default function Profile({match}) {
 
-    const [userID] = useState(match.params.user_id)
-    const [user, setUser] = useState({})
+    // const [user, setUser] = useState([])
+    // let userId = match.params.user_id;
+
 
     // useEffect(() =>{
     //     getUsername(userID)

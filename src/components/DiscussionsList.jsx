@@ -10,7 +10,7 @@ const[allDisc,setAllDisc]=useState([])
         getAllDisc().then(data=>{
            
                 setAllDisc(data.topics) 
-                console.log(data.topics)  
+                // console.log(data.topics)  
            
         })
     },[])
@@ -24,7 +24,7 @@ const[allDisc,setAllDisc]=useState([])
             })} */}
        
             {allDisc.map((disc)=>{
-                return <Discussion key={disc.topics_id} title={disc.title} timestamp={disc.timestamp}history={history}/>
+            return <Discussion key={disc.topic_id} topic_id={disc.topic_id} title={disc.title} timestamp={disc.timestamp}history={history}/>
             })}
  
             <form>

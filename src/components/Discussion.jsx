@@ -1,13 +1,14 @@
 import React from 'react'
-import MessageList from './MessageList'
+// import MessageList from './MessageList'
 
-export default function Discussion({title,timestamp,history}) {
+export default function Discussion({topic_id,title,timestamp,history}) {
     let timeStampFormat=new Date(timestamp).toLocaleString()
+    console.log(topic_id)
     //sve por za tu diskusiju
     return (
         <div>
-            <p >{title} {timeStampFormat}</p>
-
+            <p onClick={() => {history.push(`/MessageList/${topic_id}`)
+        }} >{title} {timeStampFormat}</p>
             
             {/* <form>
                 <input type='text' placeholder='New Message' />
