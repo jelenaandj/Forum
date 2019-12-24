@@ -9,8 +9,8 @@ export default function DiscussionsList({history}) {
 const[allDisc,setAllDisc]=useState([])
 const[newDisc,setNewDisc]=useState({})
 const[newTitle,setNewTitle]=useState('')
-const user=useContext(UserContext)
 
+const user=useContext(UserContext)
 
     useEffect(()=>{
         getAllDisc().then(data=>{
@@ -33,7 +33,7 @@ const user=useContext(UserContext)
             {allDisc.map((disc)=>{
             return <Discussion key={disc.topic_id} topic_id={disc.topic_id} title={disc.title} timestamp={disc.timestamp}history={history}/>
             })}
-
+            {user?
             <form>
                 <input type="text" placeholder="Discussion Name" required onInput={e => {
                 setNewTitle(e.target.value)
@@ -44,14 +44,7 @@ const user=useContext(UserContext)
                     handleNewDisc(user.user_id,newTitle)
                     }} />
             </form>
+                :null}
         </div>
     );
 }
-// useEffect(()=>{
-//     getAllDisc().then(data=>{
-//         if(data.success) {
-//             setAllDisc(data.topics)   
-//         }
-//         else console.log('error')
-//     })
-// },[])
