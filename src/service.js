@@ -50,11 +50,22 @@ function addNewDisc(newTopic){
     }).then(res => res.json())
 }
 
+function addNewMsg(newMsg){
+    return fetch(`${BASEURL}${API}${MESSAGE}`,{
+        headers:{
+            'Content-Type':'application/json; charset=utf-8'
+        },
+        method:'PUT',
+        body:JSON.stringify(newMsg)
+    }).then(res => res.json())
+}
+
 export {
     register,
     login,
     getAllDisc,
     getDiscMsg,
     getAllUsers,
-    addNewDisc
+    addNewDisc,
+    addNewMsg
 }
