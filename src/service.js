@@ -4,6 +4,7 @@ const USERS='/users'
 const TOPICS='/topics'
 const MESSAGE='/message/'
 
+
 function register(user){
     return fetch(`${BASEURL}${API}${USERS}`,{
         headers:{
@@ -39,11 +40,21 @@ function getAllUsers(){
     .then(res => res.json())
 }
 
+function addNewDisc(newTopic){
+    return fetch(`${BASEURL}${API}${TOPICS}`,{
+        headers:{
+            'Content-Type':'application/json; charset=utf-8'
+        },
+        method:'PUT',
+        body:JSON.stringify(newTopic)
+    }).then(res => res.json())
+}
 
 export {
     register,
     login,
     getAllDisc,
     getDiscMsg,
-    getAllUsers
+    getAllUsers,
+    addNewDisc
 }

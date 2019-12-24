@@ -21,13 +21,17 @@ export default function MessageList({match, history}) {
     return (
         <div>
             {messages.map(message=>{
-                return <Message message={message} history={history}/>
+                return (
+                    <div>
+                        <Message message={message} key={message.id} history={history}/>
+                        <form>
+                            <input type='text' placeholder='New Message' />
+                            <input type="submit" value="Send" />
+                        </form>
+                    </div>
+                    )        
             })}
-            {/* <form>
-                <input type='text' placeholder='Discussion Name' />
-                <input type='text' placeholder='New Message' />
-                <input type="submit" value="Send" />
-            </form> */}
+            
         </div>
     )
 }

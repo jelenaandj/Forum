@@ -14,7 +14,6 @@ function Register({setUser,history}) {
     const[issamePass,setIsSamePass]=useState('')
 
 
-    
     useEffect(() => {
         function isValidPass(){
             if((/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/g).test(password)){
@@ -33,8 +32,8 @@ function Register({setUser,history}) {
     },[confirmPassword,password])
 
     function handleSubmit(){
-        // if(!validPass || !issamePass)
-        //     return
+        if(!issamePass)
+            return
         register({name,surname,username,email,password})
         .then(data =>  {
             if(data.success) {
@@ -43,8 +42,6 @@ function Register({setUser,history}) {
             }
             else console.log('Not registered')
         })
-
-
     }
 
     return (
@@ -74,6 +71,4 @@ function Register({setUser,history}) {
         </form>
     )
 }
-
-   
 export default Register

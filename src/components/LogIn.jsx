@@ -25,10 +25,10 @@ function LogIn({setUser,history}) {
             <input type="text" placeholder="username" required onInput={e => {
                 setUsername(e.target.value)
             }}/>
-            <input type="password" placeholder="Шифра" required onInput={e => {
+            <input type="password" placeholder="password" required onInput={e => {
                 setPassword(e.target.value)
             } }/>
-            <input type="submit" value="Улогуј се" onClick={(e) => {
+            <input type="submit" value="Log in" onClick={(e) => {
                 e.preventDefault()
                 handleSubmit()
             }} />

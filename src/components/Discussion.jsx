@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Discussion({topic_id,title,timestamp,history}) {
     let timeStampFormat=new Date(timestamp).toLocaleString()
-    console.log(topic_id)
+    // console.log(topic_id)
     //sve por za tu diskusiju
     return (
         <div>
