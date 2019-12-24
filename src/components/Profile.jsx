@@ -3,7 +3,7 @@ import { getAllUsers } from '../service'
 
 export default function Profile({match}) {
 
-    const [user, setUser] = useState([])
+    const [user, setUser] = useState()
     let username = match.params.username;
 
 
@@ -12,8 +12,9 @@ export default function Profile({match}) {
            let dataUser=data.users.find(x=>{
                return username===x.username
             })
-           setUser(dataUser)
-           console.log(user)
+            
+            setUser(dataUser)
+        //    console.log(user)
         })
     },[])
     // useEffect(() =>{
@@ -23,12 +24,17 @@ export default function Profile({match}) {
     
 
     return (
+        user?
         <div>
             <p>{user.username}</p>
             <p>{user.surname}</p>
             <p>{user.username}</p>
             <p>{user.email}</p>
 
+        </div>:
+        <div>
+            {alert("User doesn't exist")}
+            {null}
         </div>
     )
 }

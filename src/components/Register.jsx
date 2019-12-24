@@ -14,18 +14,18 @@ function Register({setUser,history}) {
     const[issamePass,setIsSamePass]=useState('')
 
 
-    useEffect(() => {
-        function isValidPass(){
-            if((/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/g).test(password)){
-                setValidPass(true)
-            }
-            else{
-                setValidPass(false)
-            }
-        }
-        console.log(password)
-        isValidPass()
-    },[password])
+    // useEffect(() => {
+    //     function isValidPass(){
+    //         if((/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/g).test(password)){
+    //             setValidPass(true)
+    //         }
+    //         else{
+    //             setValidPass(false)
+    //         }
+    //     }
+    //     console.log(password)
+    //     isValidPass()
+    // },[password])
 
     useEffect(() => {
         setIsSamePass(confirmPassword === password)
@@ -38,7 +38,7 @@ function Register({setUser,history}) {
         .then(data =>  {
             if(data.success) {
                 setUser(data.user)
-                history.push('/logIn')
+                history.push('/')
             }
             else console.log('Not registered')
         })
