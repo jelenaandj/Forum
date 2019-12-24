@@ -6,17 +6,19 @@ import Register from './components/Register';
 import LogIn from './components/LogIn';
 import Content from './layout/Content';
 
-
+export const UserContext=React.createContext()
 
 
 function App() {
 
   const [user,setUser] = useState()
-
+console.log(user)
 
 
   return (
     <div>
+      <UserContext.Provider value={user}>
+
       <Router>
       <Header user={user} logedIn={user} setUser={setUser}/>
       <Content setUser={setUser} user={user}/>
@@ -24,6 +26,9 @@ function App() {
     {/* <Register user={user} setUser={setUser} logedIn={user}/>
     <LogIn user={user} setUser={setUser}/> */}
       </Router>
+
+      </UserContext.Provider>
+      
       
   
     </div>
