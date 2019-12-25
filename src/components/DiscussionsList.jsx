@@ -18,8 +18,10 @@ const user=useContext(UserContext)
                 // console.log(data.topics)  
         })
     },[newDisc])
+    //sve teme sa apija
     // console.log(allDisc[0])
 //user_id,title
+
     function handleNewDisc(user_id,title){
         addNewDisc({user_id,title}).then(data=>{
                 setNewDisc(data.topic)
@@ -27,12 +29,16 @@ const user=useContext(UserContext)
 
         })
     }
+    //ubacila temu u api 
+
     console.log(newDisc)
     return (
         <div>
+        <div className='scroll'>
             {allDisc.map((disc)=>{
-            return <Discussion key={disc.topic_id} topic_id={disc.topic_id} title={disc.title} timestamp={disc.timestamp}history={history}/>
+            return <Discussion key={disc.topic_id} topic_id={disc.topic_id} title={disc.title.toString()} timestamp={disc.timestamp}history={history}/>
             })}
+        </div>
             {user?
             <form>
                 <input type="text" placeholder="Discussion Name" required onInput={e => {
@@ -45,6 +51,7 @@ const user=useContext(UserContext)
                     }} />
             </form>
                 :null}
+        
         </div>
     );
 }

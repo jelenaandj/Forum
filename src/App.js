@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import Register from './components/Register';
 import LogIn from './components/LogIn';
 import Content from './layout/Content';
+import Footer from './layout/Footer';
 
 export const UserContext=React.createContext()
 
@@ -16,7 +17,7 @@ console.log(user)
 
 
   return (
-    <div>
+    <div className='app'>
       <UserContext.Provider value={user}>
 
       <Router>
@@ -25,6 +26,7 @@ console.log(user)
       {/* <Header user={user} setUser={setUser} logedIn={user}/> */}
     {/* <Register user={user} setUser={setUser} logedIn={user}/>
     <LogIn user={user} setUser={setUser}/> */}
+      <Footer/>
       </Router>
 
       </UserContext.Provider>

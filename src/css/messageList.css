@@ -1,0 +1,8 @@
+.message-list{
+    margin-top: 80px;
+    display: block;
+    width: 50%;
+    height: 60vh;
+    overflow: auto;
+    text-align: center;
+}

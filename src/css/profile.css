@@ -1,0 +1,30 @@
+.user{
+    text-align: left;
+    font-size: 17px;
+    margin-top: 5%;
+    margin-left: 20%;
+    display: inline-flex;
+    padding: 10px;
+}
+
+.user,label{
+    padding: 20px;
+    font-size: 15px;
+}
+.userLabel{
+    font-weight: bold;
+    font-size: 22px;
+
+}
+
+.profilePic{
+    float: right;
+    margin-right: 30%;
+}
+img{
+    widows: 100px;
+    height: auto;
+    border-radius: 20%;
+    border: black solid 3px;
+    padding: 5px;
+}

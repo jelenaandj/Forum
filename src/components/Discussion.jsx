@@ -4,10 +4,11 @@ import React from 'react'
 export default function Discussion({topic_id,title,timestamp,history}) {
     let timeStampFormat=new Date(timestamp).toLocaleString()
     // console.log(topic_id)
-    //sve por za tu diskusiju
+    //sve por za tu diskusiju 
+    
     return (
-        <div>
-            <p onClick={() => {history.push(`/MessageList/${topic_id}`)
+        <div className='discussion' >
+            <p  onClick={() => {history.push(`/MessageList/${topic_id}`)
         }} >{title} {timeStampFormat}</p>
             
             {/* <form>

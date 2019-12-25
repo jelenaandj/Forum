@@ -6,7 +6,7 @@ export default function Message({message,history}) {
 
     return (
         <div>
-            <p onClick={() => history.push(`/profile/${message.username}`)}> {message.username} {message.message} {timeStampMsg}</p>
+            <p onClick={() => history.push(`/profile/${message.username}`)}> {message.username} {message.message.toString()} {timeStampMsg}</p>
             
         </div>
     )
