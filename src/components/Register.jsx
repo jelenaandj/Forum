@@ -10,7 +10,6 @@ function Register({setUser,history}) {
     const[email,setEmail]=useState('')
     const[password,setPassword]=useState('')
     const[confirmPassword,setConfirmPassword]=useState('')
-    const[validPass,setValidPass]=useState('')
     const[issamePass,setIsSamePass]=useState('')
 
 
@@ -46,23 +45,23 @@ function Register({setUser,history}) {
 
     return (
         <form>
-            <input type="text" placeholder="Име" required onInput={e => {
+            <input type="text" placeholder="Name" required onInput={e => {
                 setName(e.target.value)
             }}/>
-            <input type="text" placeholder="Презиме" required onInput={e => {
+            <input type="text" placeholder="Surname" required onInput={e => {
                 setSurname(e.target.value)
             }}/>
 
-            <input type="text" placeholder="Корисничко име" required onInput={e => {
+            <input type="text" placeholder="Username" required onInput={e => {
                 setUsername(e.target.value)
             }}/>  
             <input type="email" placeholder="Email" required onInput={e => {
                 setEmail(e.target.value)
             }}/>
-            <input type="password" placeholder="Шифра" required onInput={e => {
+            <input type="password" placeholder="Password" required onInput={e => {
                 setPassword(e.target.value)
             } }/>
-            <input type="password" placeholder="Потврди шифру" required onInput={e => {
+            <input type="password" placeholder="Confirm Password" required onInput={e => {
                 setConfirmPassword(e.target.value)
             }} />
                 
