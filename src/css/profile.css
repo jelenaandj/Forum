@@ -1,14 +1,11 @@
 .user{
-    text-align: left;
+    text-align: center;
     font-size: 17px;
-    margin-top: 5%;
-    margin-left: 20%;
-    display: inline-flex;
-    padding: 10px;
+
 }
 
 .user,label{
-    padding: 20px;
+    /* padding: 20px; */
     font-size: 15px;
 }
 .userLabel{
@@ -18,13 +15,25 @@
 }
 
 .profilePic{
-    float: right;
-    margin-right: 30%;
-}
-img{
-    widows: 100px;
+    width:200px;
     height: auto;
     border-radius: 20%;
     border: black solid 3px;
-    padding: 5px;
+    padding: 10px;
+    margin-right: 10px;
+ 
+}
+.header-profile{
+    text-decoration: none;
+    font-size: 25px;
+    /* margin: 40px; */
+    padding: 10px;
+    /* margin: 30px;
+    border: white solid 2px; */
+}
+.hederpic{
+    display: inline;
+    margin-left: 10%;
+    width: fit-content;
+    float: left;
 }

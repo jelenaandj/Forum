@@ -22,7 +22,7 @@ export default function Profile({match}) {
     //     getUsername(userID)
     //     .then(data => setUser(data.user))
     // },[userID])
-    
+    let tempUserpic="https://image.flaticon.com/icons/png/512/17/17004.png";
 
     return (
         user?
@@ -31,7 +31,7 @@ export default function Profile({match}) {
             <p><label>Surname:</label> <label className='userLabel'>{user.surname}</label></p>
             <p><label>Username:</label> <label className='userLabel'>{user.username}</label></p>
             <p><label>Email:</label> <label className='userLabel'>{user.email}</label></p>
-            <img className='profilePic' src={user.picture===null? "https://image.flaticon.com/icons/png/512/17/17004.png":user.picture} alt='user-img'/>
+            <img className='profilePic' src={user.picture===null? tempUserpic:user.picture} alt='user-img'/>
         </div>:
         <div>
             {/* {alert("User doesn't exist")} */}

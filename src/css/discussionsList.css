@@ -1,8 +1,8 @@
 .scroll{
-    margin-top: 80px;
+    margin-top: 150px;
     display: block;
     width: 50%;
-    height: 60vh;
+    height: 50vh;
     overflow: auto;
     /* text-align: center; */
     margin: auto;
@@ -10,6 +10,7 @@
 }
 .discussion{
     /* align-content: center; */
+    margin:50px;
     font-size: 20px;
     font-weight: 600;
 

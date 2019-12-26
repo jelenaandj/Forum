@@ -14,14 +14,14 @@ function LogIn({setUser,history}) {
         .then(data =>  {
             if(data.success) {
                 setUser(data.user)
-                history.push('')
+                history.push('/')
                 console.log('logged in')
             }
             else console.log('Not Logged in')
         })
     }
     return (
-        <form>
+        <form class='log'>
             <input type="text" placeholder="username" required onInput={e => {
                 setUsername(e.target.value)
             }}/>

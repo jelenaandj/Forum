@@ -6,6 +6,9 @@ import {UserContext} from '../App'
 
 export default function MessageList({match, history}) {
 
+    // console.log('mathc',match) parametri
+    // console.log('history',history) 
+
     // const [topicID,setTopicID] = useState(match.params.topics_id)
     const user=useContext(UserContext)
 
@@ -37,22 +40,23 @@ console.log(newMsg)
                 // console.log(data.topics)  
         })
     },[])
-
+// console.log('mes',messages)
     return (
         <>
         <h3>{title}</h3>
         <div className='message-list'>
             
             {messages.map(message=>{ return (
-            <div><Message message={message} key={message.id} history={history}/></div>
+            <div><Message message={message} key={message.message_id} message_id={message.message_id} history={history}/></div>
                 )})}
-            {user?
+            
+        </div>
+        {user?
                <form>
                     <textarea type='text' placeholder='New Message'required onInput={e => {setNewMsg(e.target.value)}}/>
                     <input type="submit" value="Send" onClick={e => {e.preventDefault();handleSubmit(user.username,topicID,newMsg)}} />
                 </form>
             :null} 
-        </div>
         </>
     )
 }
