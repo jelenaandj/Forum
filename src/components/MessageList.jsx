@@ -29,7 +29,7 @@ console.log(newMsg)
     
     function handleSubmit(username,topic_id,message){
         addNewMsg({username,topic_id,message}).then(data=>{
-            setNewMsg(data)
+            setNewMsg(data,message)
             console.log(data.message)
         })
     }
@@ -39,7 +39,7 @@ console.log(newMsg)
            setTitle(data.topics.find(x=>topicID===x.topic_id).title) 
                 // console.log(data.topics)  
         })
-    },[])
+    },[newMsg])
 // console.log('mes',messages)
     return (
         <>
