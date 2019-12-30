@@ -32,8 +32,14 @@
     border: white solid 2px; */
 }
 .hederpic{
-    display: inline;
+    /* display: inline;
     margin-left: 10%;
     width: fit-content;
-    float: left;
+    float: left; */
+  position: fixed;
+  left: 10;
+  top:0;
+  width: 100%;
+  /* color: rgb(204, 137, 206); */
+  text-align: left;
 }

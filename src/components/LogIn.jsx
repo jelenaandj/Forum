@@ -30,7 +30,12 @@ function LogIn({setUser,history}) {
             } }/>
             <input type="submit" value="Log in" onClick={(e) => {
                 e.preventDefault()
-                handleSubmit()
+                if(username!=='' && password!==''){
+                    handleSubmit()
+                }else{
+                    alert('Please enter your password and username')
+                }
+                
             }} />
         </form>
     )

@@ -53,7 +53,18 @@ function Register({setUser,history}) {
             }} />
                 
 
-            <input type="submit" value="Register" onClick={e => {e.preventDefault();handleSubmit()}} />
+            <input type="submit" value="Register" onClick={e => {
+                e.preventDefault();
+                if(name!=='' && surname!=='' && username!==''  && email!==''  && password!==''  && confirmPassword!==''){
+                    if(password!==confirmPassword){
+                        alert('Password and Confirm Password do not match')
+                    }
+                    handleSubmit()
+                }else{
+                    alert('Please fill in all of the fields')
+                }
+                
+                }} />
         </form>
     )
 }

@@ -24,12 +24,20 @@ textarea{
     float: left;
 }
 button{
-    text-align: end;
+    /* text-align: end;
     height: 50px;
-    padding: 5px;
-    margin: 15px;
+    padding: 5px; */
 }
 .header-btn{
     /* float: right;
     margin-right: 20%; */
+position: fixed;
+  right: 0;
+  top:0;
+/* margin: 10%; */
+  /* width: 100%; */
+  /* color: rgb(204, 137, 206); */
+  text-align: left;
+  display:grid
+ 
 }
