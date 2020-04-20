@@ -1,45 +1,234 @@
-@import '../src/css/profile.css';
+/* @import '../src/css/profile.css';
 @import '../src/css/discussionsList.css';
-@import '../src/css/messageList.css';
+@import '../src/css/messageList.css'; */
 
 
-
-
-h1{
-  color: white;
-  margin: 30px;
-  text-decoration: none;
-  
-}
 footer{
   position: fixed;
-  left: 0;
+  right: 0;
   bottom: 0;
-  width: 100%;
+  /* width: 100%; */
   color: rgb(204, 137, 206);
-  text-align: right;
 }
-header{
-  margin: 50px;
-  margin-bottom: 0;
+/* ////// */
+
+
+.nav{
+  overflow: hidden;
+  /* display: flex; */
+  /* width: 100%; */
+  justify-content: flex-end;
+  height:100px;
+  margin-left: 10%;
+  margin-right: 10%;
+  border: 2px solid white;
+  background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(83,81,214,0.49093140674238445) 32%);
 }
-.loggedInDiv{
-  display: block;
-  text-align: center;
+
+.nav, a, h1{
+  color: white;
+  /* margin: 30px; */
+  text-decoration: none ;
+  margin: 0;
+  /* height: 20px; */
+  /* justify-self: center; */
+} 
+h1{
+  justify-self: center;
+  height: 30px;
+  width: 100%;
 }
+.nav, a{
+  /* align-self: flex-start; */
+  
+  /* width: 75%; */
+}
+.header-btn{
+  padding: 3%;
+  width: 100px;
+  margin: 2%;
+  background-color: white;
+  font-weight: 600;
+  /* justify-self: flex-end; */
+  
+}
+.header-btn:hover{
+  background: rgb(238,174,202);
+  color: white;
+  
+}
+.log-div{
+  display: flex;
+  flex-direction: column;
+  float: right;
+  margin-bottom: 5%;
+  margin-right: 2%;
+}
+
 .log{
   display: grid;
-  grid-column-gap: 50px;
-  grid-template-columns: 40%  40%;
+  grid-column-gap: 1%;
+  grid-template-columns: 50%  50%;
   background-color: #2196F3;
   padding: 10px;
   border: white solid 2px;
   width: min-content;
   position: center;
-margin-left: 40px;
-
+  /* width: 50%; */
+  /* margin-left: 40px; */
 }
 .log,input{
   margin: 10px;
   display: inline-block;
+}
+/* .loggedInDiv{
+  display: block;
+  text-align: center;
+}
+
+
+ */
+ /* ////scroll */
+ .scroll{
+  margin-top: 150px;
+  display: block;
+  width: 50%;
+  height: 50vh;
+  overflow: auto;
+  /* text-align: center; */
+  margin: auto;
+width: 50%;
+margin-bottom: 3%;
+}
+.discussion{
+  /* align-content: center; */
+  margin:50px;
+  font-size: 20px;
+  font-weight: 600;
+
+  /* border:white solid 2px; */
+  /* margin: 0; */
+  
+}
+/* ///////message list */
+.message-list{
+  margin-top: 150px;
+  display: block;
+  width: 50%;
+  height: 50vh;
+  overflow: auto;
+  /* text-align: center; */
+  margin: auto;
+width: 50%;
+}
+.msg {
+  margin:50px;
+font-size: 20px;
+font-weight: 600;
+}
+form{
+  display: inline-block;
+  text-align: center;
+ 
+}
+textarea{
+  padding: 0%;
+  resize: none;
+  float: left;
+}
+form{
+  display: grid;
+  grid-column-gap: 1%;
+  grid-template-columns: 50%  50%;
+  padding: 10px;
+  border: white solid 2px;
+  width: min-content;
+  position: center;
+  /* width: 50%; */
+  /* margin-left: 40px; */
+}
+form,input{
+  margin: 10px;
+  display: inline-block;
+}
+form .btn{
+  padding: 3%;
+  width: 100px;
+  margin: 2%;
+  background-color: white;
+  font-weight: 600;
+}
+form .btn:hover{
+  background: rgb(238,174,202);
+  color: white;
+  
+}
+
+/* //////////profile */
+.user{
+  text-align: center;
+  font-size: 17px;
+
+}
+
+.user,label{
+  /* padding: 20px; */
+  font-size: 15px;
+}
+.userLabel{
+  font-weight: bold;
+  font-size: 22px;
+
+}
+
+.profilePic{
+  width:200px;
+  height: auto;
+  border-radius: 20%;
+  border: black solid 2px;
+  padding: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+
+}
+.header-profile{
+  text-decoration: none;
+  font-size: 20px;
+  /* margin: 40px; */
+  padding: 15px;
+  /* margin: 30px;
+  border: white solid 2px; */
+}
+.hederpic{
+  /* display: inline;
+  margin-left: 10%;
+  width: fit-content;
+  float: left; */
+position: fixed;
+left: 10;
+top:0;
+width: 100%;
+/* color: rgb(204, 137, 206); */
+text-align: left;
+}
+
+@media (max-width: 600px){
+  h1{
+    font-size: larger;
+  }
+  h3{
+    font-size: medium;
+  }
+  main,p{
+    font-size: medium;
+    margin: 0;
+  }
+  form{
+    margin: 0;
+  }
+  .profilePic{
+    height:100px;
+    width: auto;
+  }
 }

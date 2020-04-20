@@ -56,7 +56,7 @@ const[newTitleMsg,setNewTitleMsg]=useState('')
                 setNewTitle(e.target.value)
             }}/>
                 <input type='text' placeholder='New Message' onChange={e=>{setNewTitleMsg(e.target.value)}} />
-                <input type="submit" value="Send"  onClick={e => {
+                <input type="submit" value="Send" className='btn'  onClick={e => {
                     e.preventDefault();
                     handleNewDisc(user.user_id,newTitle)
                     }} />
