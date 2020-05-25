@@ -39,11 +39,7 @@ h1{
   height: 30px;
   width: 100%;
 }
-.nav, a{
-  /* align-self: flex-start; */
-  
-  /* width: 75%; */
-}
+
 .header-btn{
   padding: 3%;
   width: 100px;
